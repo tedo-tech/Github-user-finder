@@ -21,7 +21,7 @@ class App extends Component {
   searchusers = async (text) => {
     this.setState({ loading: true }); // for the spinner
     const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&client_id=c3ca0b81676e8cfb9b0a&client_secret=786a22da9b1cff526a10a751a7bb484cf898eb41`
+      `https://api.github.com/search/users?q=${text}&client_id={your-key}&client_secret=786a22da9b1cff526a10a751a7bb484cf898eb41`
     );
 
     this.setState({ users: res.data.items, loading: false });
